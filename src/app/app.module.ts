@@ -7,14 +7,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { ValueService } from './services/value.service'
 import { TodosComponent } from './components/todos/todos.component'
-import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './components/login/login.component';
-import { HomeComponent } from './components/home/home.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import { HttpClientModule } from '@angular/common/http'
+import { LoginComponent } from './components/login/login.component'
+import { HomeComponent } from './components/home/home.component'
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
+import { ProfileComponent } from './components/profile/profile.component'
 import { UsersComponent } from './components/users/users.component'
+
 @NgModule({
-  declarations: [AppComponent, TodosComponent, LoginComponent, HomeComponent, PageNotFoundComponent, ProfileComponent, UsersComponent],
+  declarations: [
+    AppComponent,
+    TodosComponent,
+    LoginComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    ProfileComponent,
+    UsersComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [ValueService],
   bootstrap: [AppComponent],

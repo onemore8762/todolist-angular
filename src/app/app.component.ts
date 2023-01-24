@@ -1,9 +1,9 @@
 import { Component } from '@angular/core'
 
-interface IUser {
-  age: number
-  name: string
-}
+// interface IUser {
+//   age: number
+//   name: string
+// }
 
 @Component({
   selector: 'todolist-root',

@@ -1,1 +1,5 @@
 <p>users works!</p>
+<div *ngFor="let user of users$ | async">
+  {{ user.id }} - <a [routerLink]="['/profile', user.id]">{{ user.name }}</a>
+</div>
+<button (click)="nextUsersHandler()">next</button>

@@ -9,5 +9,19 @@
   <!--  <div>{{ text }}</div>-->
   <!--  <input type="text" [(ngModel)]="text" />-->
 </div>
-<todolist-todos></todolist-todos>
-<todolist-login></todolist-login>
+<!--<todolist-todos></todolist-todos>-->
+<!--<todolist-login></todolist-login>-->
+<nav>
+  <a
+    class="button"
+    routerLink="/"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="activebutton"
+    >Home</a
+  >
+  <a class="button" routerLink="/login" routerLinkActive="activebutton">Login</a>
+  <a class="button" routerLink="/todos" routerLinkActive="activebutton">Todos</a>
+  <a class="button" routerLink="/users" routerLinkActive="activebutton">Users</a>
+  <a class="button" routerLink="/profile" routerLinkActive="activebutton">Profile</a>
+</nav>
+<router-outlet></router-outlet>

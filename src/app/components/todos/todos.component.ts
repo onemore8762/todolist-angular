@@ -1,7 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core'
-import { HttpErrorResponse } from '@angular/common/http'
+import { Component, OnInit } from '@angular/core'
 import { Todo, TodosService } from '../../services/todos.service'
-import { Observable, Subscription } from 'rxjs'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'todolist-todos',
