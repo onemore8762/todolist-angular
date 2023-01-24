@@ -30,17 +30,8 @@ interface Contacts {
   providedIn: 'root',
 })
 export class ProfileService {
-  httpOptions = {
-    withCredentials: true,
-    headers: {
-      'api-key': environment.apiKey,
-    },
-  }
   constructor(private http: HttpClient) {}
   getProfile(userId: number) {
-    return this.http.get<ProfileResponse>(
-      `${environment.baseNetworkUrl}/profile/${userId}`,
-      this.httpOptions
-    )
+    return this.http.get<ProfileResponse>(`${environment.baseNetworkUrl}/profile/${userId}`)
   }
 }
