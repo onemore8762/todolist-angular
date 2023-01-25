@@ -1,27 +1,2 @@
-<div>
-  <!--  <h1>{{ title }}</h1>-->
-  <!--  <h2>{{ user.name }}</h2>-->
-  <!--  <button [disabled]="isLoading">X</button>-->
-  <!--  <button (click)="onClick()">X</button>-->
-  <!--  <h3>{{ text }}</h3>-->
-  <!--  <input type="text" (keyup.enter)="onChange($event)" [value]="text" />-->
-  <!--  -->
-  <!--  <div>{{ text }}</div>-->
-  <!--  <input type="text" [(ngModel)]="text" />-->
-</div>
-<!--<todolist-todos></todolist-todos>-->
-<!--<todolist-login></todolist-login>-->
-<nav>
-  <a
-    class="button"
-    routerLink="/"
-    [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="activebutton"
-    >Home</a
-  >
-  <a class="button" routerLink="/login" routerLinkActive="activebutton">Login</a>
-  <a class="button" routerLink="/todos" routerLinkActive="activebutton">Todos</a>
-  <a class="button" routerLink="/users" routerLinkActive="activebutton">Users</a>
-  <a class="button" routerLink="/profile" routerLinkActive="activebutton">Profile</a>
-</nav>
+<todolist-navigation></todolist-navigation>
 <router-outlet></router-outlet>

@@ -2,21 +2,9 @@ import { Injectable } from '@angular/core'
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { BehaviorSubject, catchError, EMPTY, map } from 'rxjs'
 import { environment } from 'src/environments/environment.development'
-import { BeatyLoggerService } from './beaty-logger.service'
-
-export interface Todo {
-  addedDate: string
-  id: string
-  order: number
-  title: string
-}
-
-export interface TodoResponse<T = object> {
-  data: T
-  messages: string[]
-  fieldsErrors: string[]
-  resultCode: number
-}
+import { BeatyLoggerService } from '../../core/services/beaty-logger.service'
+import { Todo } from '../models/todos.model'
+import { CommonResponse } from '../../core/models/core.model'
 
 @Injectable({
   providedIn: 'root',
@@ -49,7 +37,7 @@ export class TodosService {
 
   createTodo(title: string) {
     return this.http
-      .post<TodoResponse<{ item: Todo }>>(
+      .post<CommonResponse<{ item: Todo }>>(
         `${environment.baseUrl}todo-lists`,
         { title },
         this.httpOptions
@@ -69,7 +57,7 @@ export class TodosService {
 
   deleteTodo(todoListId: string) {
     return this.http
-      .delete<TodoResponse>(`${environment.baseUrl}todo-lists/${todoListId}`, this.httpOptions)
+      .delete<CommonResponse>(`${environment.baseUrl}todo-lists/${todoListId}`, this.httpOptions)
       .pipe(
         catchError(this.errorHandler.bind(this)),
         map(() => {

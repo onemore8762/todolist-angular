@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core'
-type logType = 'error' | 'success' | 'info' | 'warning'
+import { logType } from '../models/core.model'
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class BeatyLoggerService {
   log(message: string, type: logType) {
     console.log(`%c${message}`, this.getType(type))

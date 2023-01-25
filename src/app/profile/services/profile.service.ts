@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { environment } from '../../environments/environment.development'
+import { environment } from '../../../environments/environment.development'
 
 export interface ProfileResponse {
   aboutMe?: string
@@ -16,14 +16,14 @@ export interface ProfileResponse {
 }
 
 interface Contacts {
-  facebook?: any
-  website?: any
-  vk?: any
-  twitter?: any
-  instagram?: any
-  youtube?: any
-  github?: any
-  mainLink?: any
+  facebook?: unknown
+  website?: unknown
+  vk?: unknown
+  twitter?: unknown
+  instagram?: unknown
+  youtube?: unknown
+  github?: unknown
+  mainLink?: unknown
 }
 
 @Injectable({

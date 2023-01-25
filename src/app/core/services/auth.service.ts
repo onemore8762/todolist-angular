@@ -1,26 +1,10 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { environment } from '../../environments/environment.development'
+import { environment } from '../../../environments/environment.development'
+import { MyResponse } from '../models/core.model'
+import { ResultCodes } from '../enums/core.enums'
 
-interface MyResponse {
-  data: {
-    id: number
-    login: string
-    email: string
-  }
-  messages: string[]
-  fieldErrors: string[]
-  resultCode: number
-}
-
-enum ResultCodes {
-  success = 0,
-  error = 1,
-}
-
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class AuthService {
   isAuth = false
   constructor(private http: HttpClient) {}
